@@ -24,6 +24,15 @@ def new_user(id):
             'link': ""
         }
     }
+    premium_users_data = database['premium_users']
+
+default_verify = {
+    'is_verified': True,
+    'verified_time': 0,
+    'verify_token': "",
+    'link': ""
+}
+
 
 async def present_user(user_id: int):
     found = await user_data.find_one({'_id': user_id})
