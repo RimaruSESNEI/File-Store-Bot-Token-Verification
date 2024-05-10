@@ -174,23 +174,7 @@ async def start_command(client: Client, message: Message):
 
 @Bot.on_message(filters.private & filters.command('authorize') & filters.user(ADMINS))
 async def change_authorization(message, is_authorize):
-    msg = message.text.split()
-    if len(msg) > 1:
-        id_ = int(msg[1].strip())
-    elif reply_to := message.reply_to_message:
-        id_ = reply_to.from_user.id
-    else:
-        id_ = message.chat.id
-    if is_authorize:
-        success_message = 'Authorized'
-        if id_ in user_data and user_data[id_].get('is_auth'):
-            success_message = 'Already authorized!'
-        else:
-            update_user_ldata(id_, 'is_auth', True)
-            if DATABASE_URL:
-                await DbManager().update_premium_users(id_)
-    
-
+    If massage form_owner_id
     
         
 #=====================================================================================##
