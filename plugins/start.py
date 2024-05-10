@@ -139,7 +139,7 @@ async def start_command(client: Client, message: Message):
                     pass
 
 
-        elif verify_status['is_verified']:
+        elif verify_status['is_verified'] & filters.user(ADMINS):
             reply_markup = InlineKeyboardMarkup(
                 [[InlineKeyboardButton("• ᴀʙᴏᴜᴛ ᴍᴇ", callback_data="about"),
                   InlineKeyboardButton("ᴄʟᴏsᴇ •", callback_data="close")]]
