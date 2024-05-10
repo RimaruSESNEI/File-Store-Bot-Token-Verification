@@ -24,6 +24,7 @@ def new_user(id):
             'link': ""
         }
     }
+    
     premium_users_data = database['premium_users']
 
 default_verify = {
