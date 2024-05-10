@@ -174,7 +174,7 @@ async def start_command(client: Client, message: Message):
 
 @Bot.on_message(filters.private & filters.command('authorize') & filters.user(ADMINS))
 async def change_authorization(message, is_authorize):
-    If massage form_owner_id
+    If massage from_owner_id
     
         
 #=====================================================================================##
