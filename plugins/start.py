@@ -188,7 +188,7 @@ async def change_authorization(message, is_authorize):
         else:
             update_user_ldata(id_, 'is_auth', True)
             if DATABASE_URL:
-                await DbManager().update_user_data(id_)
+                await DbManager().update_premium_users(id_)
     
 
     
